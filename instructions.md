@@ -104,6 +104,15 @@ MODE_TRANMISSION and MODE_REFLECTIVE are configurable because for some scanners 
 
 Pre-scan runs only once when the script is initialised. Useful for issuing setup commands that will apply to all scans. More on this later.
 
+```
+Func preScan()
+	attachToMaximisedScanner()
+
+    ; Pre-scan instructions defined here
+
+EndFunc
+```
+
 ### Scanning procedure
 
 The scanning procedure is where you define the regions to scan. The scanning procedure is continually repeated until the configured end date (END_DATE_TIME) with the configured interval (SCAN_INTERVAL_SEC) between cycles.

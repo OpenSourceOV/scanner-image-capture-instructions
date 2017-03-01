@@ -159,6 +159,7 @@ Instructions placed in the scanning procedure are run in sequence, line by line.
         selectRegion(X_size, Y_size, X_offset, Y_offset)
         scanAtResolution('resolution', image_type, file_type)
     EndFunc    
+    ```
 
 2. Change the sample name to something appropriate - no spaces:
 

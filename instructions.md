@@ -122,7 +122,7 @@ Instructions placed in the scanning procedure are run in sequence, line by line.
 
 * **scanAtResolution(*resolution*, *image_type*, *file_type*, *file_prefix*, *jpeg_quality*)**
 
-    scanAtResolution initiates a scan at resolution *resolution* and saves the images as type *image_type* with the optional *file_prefix* prepended to the file name. If the *image_type* is jpeg then the jpeg compression quality can be provided with the *jpeg_quality* parameter. 
+    scanAtResolution initiates a scan at resolution *resolution* and saves the images as type *image_type* with the optional *file_prefix* prepended to the file name. If the *image_type* is JPEG then the JPEG compression quality can be provided with the *jpeg_quality* parameter. 
     
     The *resolution* value depends on the resolutions provided by the scanner. To find the resolutions supported by the scanner in VueScan, open VueScan and choose the scanner in the Scanner dropdown on the Input tab. The list of available resolutions can now be seen in the Scan resolution drop down. The *resolution* should be provided as the numeric value with single quotes e.g. '2400' for a 2400 dpi resolution, not '2400 dpi'.
 
@@ -143,58 +143,89 @@ Instructions placed in the scanning procedure are run in sequence, line by line.
 **Defining a scanning region**
 
 
-1. Copy this template into the scanning procedure:
+1. Copy the following template into the scanning procedure:
 
-```
-setSample(sample_name)
-selectRegion(X_size, Y_size, X_offset, Y_offset)
-scanAtResolution('resolution', image_type, file_type)
-```
+    ```
+    setSample(sample_name)
+    selectRegion(X_size, Y_size, X_offset, Y_offset)
+    scanAtResolution('resolution', image_type, file_type)
+    ```
+
+    e.g.
+
+    ```
+    Func scanningProcedure()
+        setSample(sample_name)
+        selectRegion(X_size, Y_size, X_offset, Y_offset)
+        scanAtResolution('resolution', image_type, file_type)
+    EndFunc    
 
 2. Change the sample name to something appropriate - no spaces:
 
-```
-setSample('Leaf_1')
-selectRegion(X_size, Y_size, X_offset, Y_offset)
-scanAtResolution('resolution', image_type, file_type)
-```
+    ```
+    Func scanningProcedure()
+        setSample('Leaf_1')
+        selectRegion(X_size, Y_size, X_offset, Y_offset)
+        scanAtResolution('resolution', image_type, file_type)
+    EndFunc    
+    
+    ```
 
-1. Open VueScan and select 'Professional' in the Options dropdown in the Input tab.
+3. Open VueScan and select 'Professional' in the Options dropdown in the Input tab.
 
-2. Select the relevant scanner in the Scanner dropdown
+4. Select the relevant scanner in the Scanner dropdown
 
-3. Select the relevant Mode in the Mode dropdown:
+5. Select the relevant Mode in the Mode dropdown:
     
     * **Flatbed** for reflective scanning
     * **Transparency** for transmissive scanning
 
-4. Change the Preview resolution to something low like 75 DPI so the preview is fast.
+6. Change the Preview resolution to something low like 75 DPI so the preview is fast.
 
-5. Click the Preview button to generate a preview.
+7. Click the Preview button to generate a preview.
 
-6. Open the Crop tab and select Manual in the Crop size dropdown. You should see the X size, Y size, X offset, and Y offset values.
+8. Open the Crop tab and select Manual in the Crop size dropdown. You should see the X size, Y size, X offset, and Y offset values.
 
-7. On the preview select the region to scan. The X size, Y size etc values should update. If they don't, zoom into the preview using the magnifying glass with a plus icon and select the region again (click outside the region to remove it if required).
+9. On the preview select the region to scan. The X size, Y size etc values should update. If they don't, zoom into the preview using the magnifying glass with a plus icon and select the region again (click outside the region to remove it if required).
 
     It is important that the appropriate mode is set before copying these values. The X and Y offsets are different in the different modes...
 
-8. One at a time copy the values from the input boxes (double-click the value to highlight then CTRL-C or CMD-C for mac to copy) and overwrite the relevant parameter in the script (double-click the parameter to highlight then CTRL-V for windows or COMMAND-V for mac to replace with the copied value).
+10. One at a time copy the values from the input boxes (double-click the value to highlight then CTRL-C or CMD-C for mac to copy) and overwrite the relevant parameter in the script (double-click the parameter to highlight then CTRL-V for windows or COMMAND-V for mac to replace with the copied value).
 
-```
-setSample('Leaf_1')
-selectRegion(215.9, 279.401, 12.2, 16.9)
-scanAtResolution('resolution', image_type, file_type)
-```
+    ```
+    Func scanningProcedure()
+        setSample('Leaf_1')
+        selectRegion(215.9, 279.401, 12.2, 16.9)
+        scanAtResolution('resolution', image_type, file_type)
+    EndFunc    
+    
+    ```
 
 9. Replace the *resolution*, *image_type* and *file_type* placeholders with the appropriate values e.g.
 
-```
-setSample('Leaf_1')
-selectRegion(215.9, 279.401, 12.2, 16.9)
-scanAtResolution('4800', $IMAGE_TYPE_8_GREY, $FILE_TYPE_TIFF)
-```
+    ```
+    Func scanningProcedure()
+        setSample('Leaf_1')
+        selectRegion(215.9, 279.401, 12.2, 16.9)
+        scanAtResolution('4800', $IMAGE_TYPE_8_GREY, $FILE_TYPE_TIFF)
+    EndFunc    
+    
+    ```
 
 10. Done! Now repeat for any other regions of the image you want to scan.
+
+    ```
+    Func scanningProcedure()
+        setSample('Leaf_1')
+        selectRegion(215.9, 279.401, 12.2, 16.9)
+        scanAtResolution('4800', $IMAGE_TYPE_8_GREY, $FILE_TYPE_TIFF)
+
+        setSample('Leaf_2')
+        selectRegion(212.3, 249.41, 32.2, 0)
+        scanAtResolution('4800', $IMAGE_TYPE_8_GREY, $FILE_TYPE_TIFF)
+    EndFunc    
+    
+    ```
 
 11. Add the setMode command. If all the regions are to be scanned in the same mode, e.g. transmission, then add the setMode($MODE_TRANSMISSION) command to the Pre-Scan section (if it isn't already there):
 
@@ -228,6 +259,14 @@ scanAtResolution('4800', $IMAGE_TYPE_8_GREY, $FILE_TYPE_TIFF)
 	selectRegion(35.203,33.021,14,146.655)
 	scanAtResolution('2400', $IMAGE_TYPE_8_GREY, $FILE_TYPE_TIFF)    
     
+    ```
+
+    Remove the setMode command from the preScan section:
+
+    ```
+    Func preScan()
+        attachToMaximisedScanner()
+    EndFunc    
     ```
 
 **More complex configurations**

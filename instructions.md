@@ -322,7 +322,7 @@ An example of a good mid-high range scanner is the [Epson Perfection V800](http:
 
 The AutoIT software will only run on the Windows operating system however you can run the windows operating system on a mac using software such as [Parallels Desktop for Mac](http://www.parallels.com/au/products/desktop/) or [Oracles' VirtualBox](https://www.virtualbox.org/). 
 
-## Running two or more scanners on one machine
+## Running two or more scanners on the same machine
 
 1. For each scanner open up a new instance of the VueScan software. Open the program as you would do normally to create a new instance.
 

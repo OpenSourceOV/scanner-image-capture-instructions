@@ -88,7 +88,7 @@ OUTPUT_FOLDER|Where the scans should be saved - will be created if doesn't exist
 MODE_TRANSMISSION|Description of transmission mode - should match the value in the Mode dropdown in VueScan|"Transparency"
 MODE_REFLECTIVE|Description of the reflective mode - should match the value in the Mode dropdown in VueScan|"Flatbed"
 
-MODE_TRANMISSION and MODE_REFLECTIVE are configurable because for some scanners the Transparency mode is listed as "Transparency 8x8".
+MODE_TRANMISSION and MODE_REFLECTIVE are configurable because for some scanners the Transparency mode in VueScan is listed as "Transparency 8x8".
 
 ### Pre-scan
 

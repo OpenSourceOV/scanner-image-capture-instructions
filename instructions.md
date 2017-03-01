@@ -71,8 +71,8 @@ TBC
 The script has three key sections:
 
 * Configuration
-* Scanning procedure
 * Pre-scan
+* Scanning procedure
 
 ### Configuration
 

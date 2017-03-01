@@ -50,7 +50,7 @@
 
 13. To stop the scanning procedure before completion, find the AutoIT icon in the task tray (to the right of the task bar at the bottom of the screen), right-click and select 'Stop script'.
 
-All the files will be saved in the OUTPUT_FOLDER in the following directory structure and file format:
+All the files will be saved in the OUTPUT_FOLDER using the following directory structure and file name:
 
 ```
 OUTPUT_FOLDER\sample_name\mode\resolution\YYYY-MM-DD-0001+.[jpg|tiff]

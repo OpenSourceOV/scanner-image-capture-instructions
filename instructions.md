@@ -54,8 +54,7 @@
 
 ## Sample preparation guide
 
-TBD
-
+TBC
 
 ## Configuration Guide
 

@@ -1,4 +1,4 @@
-# Image capture instructions (scanner)
+# Scanner Image Capture Instructions
 
 ## What you'll need
 
@@ -50,7 +50,7 @@
 
 13. To stop the scanning procedure before completion, find the AutoIT icon in the task tray (to the right of the task bar at the bottom of the screen), right-click and select 'Stop script'.
 
-All the files will be saved in the OUTPUT_FOLDER using the following directory structure and file name:
+All the files will be saved in the OUTPUT_FOLDER using the following directory structure and file naming convention:
 
 ```
 OUTPUT_FOLDER\sample_name\mode\resolution\YYYY-MM-DD-0001+.[jpg|tiff]
@@ -62,7 +62,7 @@ C:\Data\Eucalyptus_2102107\Leaf_1\Trans\2400\2017-01-22-0001.tif
 
 --------
 
-## Sample preparation guide
+## Sample Preparation Guide
 
 TBC
 

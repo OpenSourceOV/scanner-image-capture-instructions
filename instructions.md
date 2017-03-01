@@ -191,7 +191,7 @@ Instructions placed in the scanning procedure are run in sequence, line by line.
 
     It is important that the appropriate mode is set before copying these values. The X and Y offsets are different in the different modes...
 
-10. One at a time copy the values from the input boxes (double-click the value to highlight then CTRL-C or CMD-C for mac to copy) and overwrite the relevant parameter in the script (double-click the parameter to highlight then CTRL-V for windows or COMMAND-V for mac to replace with the copied value).
+10. One at a time copy the values from the input boxes (double-click the value to highlight then CTRL-c) and overwrite the relevant parameter in the script (double-click the parameter to highlight then CTRL-v to replace with the copied value).
 
     ```
     Func scanningProcedure()

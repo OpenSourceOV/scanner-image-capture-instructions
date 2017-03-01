@@ -320,7 +320,7 @@ An example of a good mid-high range scanner is the [Epson Perfection V800](http:
 
 ## Running on a mac
 
-The AutoIT software will only run on the Windows operating system however you can run the windows operating system on a mac using software such as [Parallels Desktop for Mac](http://www.parallels.com/au/products/desktop/) or [Oracles' VirtualBox](https://www.virtualbox.org/). 
+The AutoIT software will only run on the Windows operating system, however you can run the Windows operating system on a mac using virtualisation software such as [Parallels Desktop for Mac](http://www.parallels.com/au/products/desktop/) or [Oracle VirtualBox](https://www.virtualbox.org/). 
 
 ## Running two or more scanners on the same machine
 

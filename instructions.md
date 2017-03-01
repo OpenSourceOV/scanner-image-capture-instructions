@@ -50,6 +50,16 @@
 
 13. To stop the scanning procedure before completion, find the AutoIT icon in the task tray (to the right of the task bar at the bottom of the screen), right-click and select 'Stop script'.
 
+All the files will be saved in the OUTPUT_FOLDER in the following directory structure and file format:
+
+```
+OUTPUT_FOLDER\sample_name\mode\resolution\YYYY-MM-DD-0001+.[jpg|tiff]
+
+e.g.
+
+C:\Data\Eucalyptus_2102107\Leaf_1\Trans\2400\2017-01-22-0001.tif
+```
+
 --------
 
 ## Sample preparation guide
@@ -73,7 +83,7 @@ Const $SCAN_INTERVAL_SEC = 600
 Const $END_DATE_TIME = "2016/09/09 17:00:00";
 Const $LOG_FILE = "C:\Data\scanner_1_log.log"
 Const $SCAN_MAX_TIME = 1200;
-Const $OUTPUT_FOLDER = "C:\Data\05092016_glob_j"
+Const $OUTPUT_FOLDER = "C:\Data\Eucalyptus_2102107"
 Const $MODE_TRANSMISSION = 'Transparency'
 Const $MODE_REFLECTIVE = 'Flatbed'
 ```
@@ -169,7 +179,6 @@ Instructions placed in the scanning procedure are run in sequence, line by line.
         selectRegion(X_size, Y_size, X_offset, Y_offset)
         scanAtResolution('resolution', image_type, file_type)
     EndFunc    
-    
     ```
 
 3. Open VueScan and select 'Professional' in the Options dropdown in the Input tab.

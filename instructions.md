@@ -310,7 +310,7 @@ Any number of regions and combinations can be defined in the scanning procedure,
 
 ## Transmissive scanners
 
-Transmissive scanners are scanners that can scan slides, film, and negatives and will have an additional light source typically in the lid that moves in parallel with the read head to illuminate the document from above. 
+Transmissive scanners are scanners that can scan slides, film, and negatives and has an additional light source, typically in the lid, that moves in parallel with the read head to provide illumination from above. 
 
 Cheaper transmissive scanners tend to only be able to scan a thin window in transmissive mode while the more expensive models can scan a full A4 area. Although it is possible to get good results from a smaller window it is difficult to arrange multiple leaves/stems for scanning and can significantly increase setup time. 
 

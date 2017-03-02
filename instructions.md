@@ -64,17 +64,25 @@ C:\Data\Eucalyptus_2102107\Leaf_1\Trans\2400\2017-01-22-0001.tif
 
 ## Sample Preparation Guide
 
+### Getting the sample in focus
+
 The optimimum focal point should be directly on the surface of the glass. However, an individual scanner may have a slightly different focal point as a result of irregularities in the manufacturing process. 
 
-A good way to check the focal point is to stack four or five coins on the glass surface with each adjusted slightly so they can all be viewed from underneath. Perform a scan and you should be able to see which of the coins are in focus. This will tell you the [depth of field](https://en.wikipedia.org/wiki/Depth_of_field) and whether or not sample placed directly on the glass will be in focus or will need to be elevated.
+A good way to check the focal point is to stack four or five coins on the glass surface with each adjusted slightly so they can all be viewed from underneath. Perform a scan and you should be able to see which of the coins are in focus. This will tell you the [depth of field](https://en.wikipedia.org/wiki/Depth_of_field) and whether or not sample placed directly on the glass will be in focus or will need to be elevated. A section of clear glass under the sample can be used for elevation.
 
-It is important that the sample should be as fixed as possible to reduce the introduction of non-embolism events e.g. leaf movement as the scanner is bumped. Gaffer tape or any other strong cloth-backed adhesive tape works best, especially where the capture process may extend for a number of days.
+### Securing the sample in place
 
-Ideally the sample should be as flat as possible so that all areas are at the same focal distance and there is less chance of movement due to shrinking as the sample dehydrates. Different shaped sections of glass can be useful for placing over the sample to keep it flat while allowing light to pass through for the scan.
+It is very important that the sample should be as immovable as possible to reduce the introduction of any non-embolism events e.g. leaf movement as the scanner is bumped. Gaffer tape or any other strong cloth-backed adhesive tape works best and can be used to tape the edges of the sample to the glass.
 
-Although any number of samples can be captured using the caviscan script the reality is that is difficult to arrange multiple samples within a single scanner, ensuring that target leaves aren't overlapping or that stems aren't damaged as you attempt to fit a leaf into a tricky position. It's also important to take into consideration the time taken to select and arrange the sample. Choosing appropriate leaves/stems to put in the scanner has to be mediated with what will reach where after other sample has been fixed in place. This all takes time and your sample is dehydrating... 
+### Keeping the sample flat
 
-Using VueScan and the caviscan script you can [run multiple scanners on the same computer](#running-multiple-scanners-on-the-same-machine) and depending on the bench space available this is often an easier solution than scanning numerous samples in a single scanner.
+Ideally the sample should be as flat as possible so that all areas are at the same focal distance and there is less chance of vertical movement due to shrinking as the sample dehydrates. Different shaped sections of glass can be useful for placing over the sample (and gaffer-taped at the sides) to keep it flat while allowing light to pass through for the scan.
+
+### Keep it simple
+
+Although any number of samples can be captured using the caviscan script the reality is it can be difficult to arrange multiple samples within a single scanner, ensuring, for example, that target leaves aren't being overlapped or that stems aren't damaged as you attempt to fit a leaf into the only space left. This process also takes time, and your sample is dehydrating... 
+
+Using VueScan and the caviscan script you can [run multiple scanners on the same computer](#running-multiple-scanners-on-the-same-machine) and assuming you have bench space available this is often an easier solution than dealing with numerous samples in a single scanner.
 
 ## Configuration Guide
 

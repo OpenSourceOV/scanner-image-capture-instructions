@@ -78,7 +78,7 @@ It is very important that the sample should be as immovable as possible to reduc
 
 Ideally the sample should be as flat as possible so that all areas are at the same focal distance and there is less chance of vertical movement due to shrinking as the sample dehydrates. Different shaped sections of glass can be useful for placing over the sample (and gaffer-taped at the sides) to keep it flat while allowing light to pass through for the scan.
 
-### Keep it simple
+### Keeping it simple
 
 Although any number of samples can be captured using the caviscan script the reality is it can be difficult to arrange multiple samples within a single scanner, ensuring, for example, that target leaves aren't being overlapped or that stems aren't damaged as you attempt to fit a leaf into the only space left. This process also takes time, and your sample is dehydrating... 
 

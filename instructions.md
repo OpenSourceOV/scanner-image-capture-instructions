@@ -64,7 +64,17 @@ C:\Data\Eucalyptus_2102107\Leaf_1\Trans\2400\2017-01-22-0001.tif
 
 ## Sample Preparation Guide
 
-TBC
+The optimimum focal point should be directly on the surface of the glass. However, an individual scanner may have a slightly different focal point as a result of irregularities in the manufacturing process. 
+
+A good way to check the focal point is to stack four or five coins on the glass surface with each adjusted slightly so they can all be viewed from underneath. Perform a scan and you should be able to see which of the coins are in focus. This will tell you the [depth of field](https://en.wikipedia.org/wiki/Depth_of_field) and whether or not sample placed directly on the glass will be in focus or will need to be elevated.
+
+It is important that the sample should be as fixed as possible to reduce the introduction of non-embolism events e.g. leaf movement as the scanner is bumped. Gaffer tape or any other strong cloth-backed adhesive tape works best, especially where the capture process may extend for a number of days.
+
+Ideally the sample should be as flat as possible so that all areas are at the same focal distance and there is less chance of movement due to shrinking as the sample dehydrates. Different shaped sections of glass can be useful for placing over the sample to keep it flat while allowing light to pass through for the scan.
+
+Although any number of samples can be captured using the caviscan script the reality is that is difficult to arrange multiple samples within a single scanner, ensuring that target leaves aren't overlapping or that stems aren't damaged as you attempt to fit a leaf into a tricky position. It's also important to take into consideration the time taken to select and arrange the sample. Choosing appropriate leaves/stems to put in the scanner has to be mediated with what will reach where after other sample has been fixed in place. This all takes time and your sample is dehydrating... 
+
+Using VueScan and the caviscan script you can [run multiple scanners on the same computer](#running-multiple-scanners-on-the-same-machine) and depending on the bench space available this is often an easier solution than scanning numerous samples in a single scanner.
 
 ## Configuration Guide
 
@@ -338,7 +348,7 @@ An example of a good mid-high range scanner is the [Epson Perfection V800](http:
 
 The AutoIT software will only run on the Windows operating system, however you can run the Windows operating system on a mac using virtualisation software such as [Parallels Desktop for Mac](http://www.parallels.com/au/products/desktop/) or [Oracle VirtualBox](https://www.virtualbox.org/). 
 
-## Running two or more scanners on the same machine
+## Running multiple scanners on the same machine
 
 1. For each scanner open up a new instance of the VueScan software. Open the program as you would do normally to create a new instance.
 

@@ -18,37 +18,83 @@
 
 3. Connect the scanner to the computer and follow steps to install any required drivers.
 
-4. Create a parent folder to contain all the scans and scripts
+5. Create a parent folder to contain all the scans and scripts
 
     ```
     c:\data
     ```
 
-5. Create a directory for the scripts in the parent folder
+6. Create a directory for the scripts in the parent folder
 
     ```
     c:\data\scripts
     ```
 
-6. Move/copy/download the two caviscan files (caviscan.au3 and include.au3) into the scripts folder
+7. Move/copy/download the two caviscan files (caviscan.au3 and include.au3) into the scripts folder
 
-7. Create a copy of the caviscan.au3 file and give it name appropriate to the sample/session
+    ![](./images/files_in_folder.jpg)
+
+8. Create a copy of the caviscan.au3 file and give it name appropriate to the sample/session
+
+    e.g.
 
     ```
     c:\data\scripts\obliqua-22012017.au3
     ```
 
-8. Open VueScan and select the scanner from the scanner dropdown. Press preview to test that the scanner and software are working.
+    ![](./images/file_copied.jpg)
+
 
 9. Prepare the sample in the scanner. Follow the [Sample Preparation Guide](#sample-preparation-guide).
 
-10. Edit and configure the file. Follow the [Configuration Guide](#configuration-guide).
+4. Open VueScan. Select 'Professional' from the Options drodown. 
+
+    ![](./images/select_professional.jpg)
+
+5. Select the scanner from the Source dropdown. 
+
+    ![](./images/select_scanner.jpg)
+
+6. Select the relevant mode from the Mode dropdown (Flatbed for reflective, Transparency for transmissive).
+
+    ![](./images/select_mode.jpg)
+
+6. Press preview to test that the scanner and software are working.
+
+    ![](./images/press_preview.jpg)
+    
+    If you get any vertical banding like this:
+
+    ![](./images/preview_issue.jpg)
+
+    ...then the sample or tape is overlapping the edge of the glass and needs to be moved down:
+
+    ![](./images/overlapping_edge.jpg)
+    ![](./images/moved_back_from_edge.jpg)
+
+    Fixed:
+
+    ![](./images/band_fixed.jpg)
+
+
+10. Right-click the caviscan file and select 'Edit script' and follow the [Configuration Guide](#configuration-guide) to configure.
+
+    ![](./images/edit_script.jpg)
 
 11. Cover the scanner with light-blocking material (light blocking curtain material works well).
 
-12. Maximise the VueScan window. Open the folder containing the caviscan script and right-click the script and select 'Run'. The script will initiate a VueScan setup as required or immediately begin the scanning procedure.
+12. Maximise the VueScan window. 
 
-13. To stop the scanning procedure before completion, find the AutoIT icon in the task tray (to the right of the task bar at the bottom of the screen), right-click and select 'Stop script'.
+    ![](./images/maximise.jpg)
+
+13. Open the folder containing the caviscan script and right-click the script and select 'Run'. The script will initiate a VueScan setup as required or immediately begin the scanning procedure.
+
+    ![](./images/init_scan.jpg)
+
+14. To stop the scanning procedure **before completion** (the script will stop automatically using the configured end date), find the AutoIT icon in the task tray (to the right of the task bar at the bottom of the screen), right-click and select 'Stop script'.
+
+    ![](./images/exit_script.jpg)
+
 
 All the files will be saved in the OUTPUT_FOLDER using the following directory structure and file naming convention:
 
@@ -70,13 +116,31 @@ The optimimum focal point should be directly on the surface of the glass. Howeve
 
 A good way to check the focal point is to stack four or five coins on the glass surface with each adjusted slightly so they can all be viewed from underneath. Perform a scan and you should be able to see which of the coins are in focus. This will tell you the [depth of field](https://en.wikipedia.org/wiki/Depth_of_field) and whether or not sample placed directly on the glass will be in focus or will need to be elevated. A section of clear glass under the sample can be used for elevation.
 
+![](./images/coins.jpg) 
+![](./images/scanned_coins.jpg) 
+
+For this scanner we can see the depth of field extends from the face of the glass at least two coins up with coins 3 and 4 starting to get out of focus.
+
+![](./images/coins_closeup.jpg) 
+
 ### Securing the sample in place
 
 It is very important that the sample should be as immovable as possible to reduce the introduction of any non-embolism events e.g. leaf movement as the scanner is bumped. Gaffer tape or any other strong cloth-backed adhesive tape works best and can be used to tape the edges of the sample to the glass.
 
+![](./images/gaffer_fix.jpg) 
+![](./images/gaffer_fix_2.jpg) 
+
 ### Keeping the sample flat
 
 Ideally the sample should be as flat as possible so that all areas are at the same focal distance and there is less chance of vertical movement due to shrinking as the sample dehydrates. Different shaped sections of glass can be useful for placing over the sample (and gaffer-taped at the sides) to keep it flat while allowing light to pass through for the scan.
+
+![](./images/glass_overlay.jpg) 
+![](./images/glass_gaffer.jpg) 
+
+Tape down any unused stems and leaves.
+
+![](./images/tape_unused.jpg) 
+
 
 ### Keeping it simple
 
@@ -198,6 +262,8 @@ Instructions placed in the scanning procedure are run in sequence, line by line.
     EndFunc    
     ```
 
+    ![](./images/script_config_1.jpg) 
+
 2. Change the sample name to something appropriate - no spaces:
 
     ```
@@ -208,26 +274,41 @@ Instructions placed in the scanning procedure are run in sequence, line by line.
     EndFunc    
     ```
 
-3. Open VueScan and select 'Professional' in the Options dropdown in the Input tab.
+    ![](./images/script_config_2.jpg) 
 
-4. Select the relevant scanner in the Scanner dropdown
-
-5. Select the relevant Mode in the Mode dropdown:
-    
-    * **Flatbed** for reflective scanning
-    * **Transparency** for transmissive scanning
-
-6. Change the Preview resolution to something low like 75 DPI so the preview is fast.
+3. If you haven't already then ppen VueScan and select 'Professional' in the Options dropdown in the Input tab. Select the relevant scanner in the Source dropdown. Select the relevant Mode in the Mode dropdown (Flatbed or Transparency)
 
 7. Click the Preview button to generate a preview.
 
 8. Open the Crop tab and select Manual in the Crop size dropdown. You should see the X size, Y size, X offset, and Y offset values.
 
-9. On the preview select the region to scan. The X size, Y size etc values should update. If they don't, zoom into the preview using the magnifying glass with a plus icon and select the region again (click outside the region to remove it if required).
+    ![](./images/select_manual_cropsize.jpg) 
+
+9. On the preview area select the region to scan. 
+
+    The X size, Y size etc values should update. 
+
+    ![](./images/crop_params_update.jpg) 
+
+    If they don't, zoom into the preview using the magnifying glass with a plus icon and select the region again (click outside the region to remove it if required).
+
+    ![](./images/preview_zoom.jpg) 
+
+    ![](./images/zoomed_preview.jpg) 
 
     It is important that the appropriate mode is set before copying these values. The X and Y offsets are different in the different modes...
 
-10. One at a time copy the values from the input boxes (double-click the value to highlight then CTRL-c) and overwrite the relevant parameter in the script (double-click the parameter to highlight then CTRL-v to replace with the copied value).
+10. One at a time copy the crop values from the input boxes.
+
+    These can be typed in manually but the easiest and quickest way is to double-click the value to highlight then CTRL-C to copy...
+    
+    ![](./images/crop_copy.jpg) 
+
+    ... then in the script double-click the parameter placeholder, right-click and choose 'Paste' or simply CTRL-V.
+
+    ![](./images/crop_paste.jpg) 
+
+    Repeat for all four crop parameters.
 
     ```
     Func scanningProcedure()
@@ -249,6 +330,9 @@ Instructions placed in the scanning procedure are run in sequence, line by line.
     
     ```
 
+    ![](./images/params_setup.jpg) 
+
+
 10. Done! Now repeat for any other regions of the image you want to scan.
 
     ```
@@ -264,7 +348,9 @@ Instructions placed in the scanning procedure are run in sequence, line by line.
     
     ```
 
-11. Add the setMode command. If all the regions are to be scanned in the same mode, e.g. transmission, then add the setMode($MODE_TRANSMISSION) command to the Pre-Scan section (if it isn't already there):
+11. Add the setMode command. 
+
+    If all the regions are to be scanned in the same mode, e.g. transmission, then add the setMode($MODE_TRANSMISSION) command to the Pre-Scan section (if it isn't already there):
 
     ```
     Func preScan()
@@ -273,7 +359,10 @@ Instructions placed in the scanning procedure are run in sequence, line by line.
     EndFunc
     ```
 
-    If the regions are mixed, then organise them into groups - all the transmissive together, all the reflective together - and add the relevant setMode call before each group:
+    ![](./images/set_mode.jpg) 
+
+
+    If the regions are mixed, then don't put a setMode call in the preScan section, organise the regions into groups - all the transmissive together, all the reflective together - and add the relevant setMode call before each group:
 
 	```
     setMode($MODE_TRANSMISSION)
@@ -298,7 +387,7 @@ Instructions placed in the scanning procedure are run in sequence, line by line.
     
     ```
 
-    Remove the setMode command from the preScan section:
+    Don't forget to remove the setMode command from the preScan section:
 
     ```
     Func preScan()

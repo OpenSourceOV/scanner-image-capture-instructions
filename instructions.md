@@ -12,11 +12,13 @@
 
 ## Instructions
 
-1. Install AutoIT
+1. Start measuring water potential and continue to measure at regular intervals through the setup and image capture process.
 
-2. Install VueScan and activate the professional edition using the purchased license key.
+2. Install AutoIT
 
-3. Connect the scanner to the computer and follow steps to install any required drivers.
+3. Install VueScan and activate the professional edition using the purchased license key.
+
+4. Connect the scanner to the computer and follow steps to install any required drivers.
 
 5. Create a parent folder to contain all the scans and scripts
 
@@ -47,19 +49,25 @@
 
 9. Prepare the sample in the scanner. Follow the [Sample Preparation Guide](#sample-preparation-guide).
 
-4. Open VueScan. Select 'Professional' from the Options drodown. 
+10. Open VueScan and restore settings. 
+    
+    **Important**: From the File menu select 'Default options' to restore VueScan to the default settings. This should be done before every configuration setup.
+
+    ![](./images/default_options.jpg) 
+
+11. Select 'Professional' from the Options drodown. 
 
     ![](./images/select_professional.jpg)
 
-5. Select the scanner from the Source dropdown. 
+12. Select the scanner from the Source dropdown. 
 
     ![](./images/select_scanner.jpg)
 
-6. Select the relevant mode from the Mode dropdown (Flatbed for reflective, Transparency for transmissive).
+13. Select the relevant mode from the Mode dropdown (Flatbed for reflective, Transparency for transmissive).
 
     ![](./images/select_mode.jpg)
 
-6. Press preview to test that the scanner and software are working.
+14. Press preview to test that the scanner and software are working.
 
     ![](./images/press_preview.jpg)
     
@@ -77,21 +85,21 @@
     ![](./images/band_fixed.jpg)
 
 
-10. Right-click the caviscan file and select 'Edit script' and follow the [Configuration Guide](#configuration-guide) to configure.
+15. Right-click the caviscan file and select 'Edit script' and follow the [Configuration Guide](#configuration-guide) to configure.
 
     ![](./images/edit_script.jpg)
 
-11. Cover the scanner with light-blocking material (light blocking curtain material works well).
+16. Cover the scanner with light-blocking material (light blocking curtain material works well).
 
-12. Maximise the VueScan window. 
+17. Maximise the VueScan window. 
 
     ![](./images/maximise.jpg)
 
-13. Open the folder containing the caviscan script and right-click the script and select 'Run'. The script will initiate a VueScan setup as required or immediately begin the scanning procedure.
+18. Open the folder containing the caviscan script and right-click the script and select 'Run'. The script will initiate a VueScan setup as required or immediately begin the scanning procedure.
 
     ![](./images/init_scan.jpg)
 
-14. To stop the scanning procedure **before completion** (the script will stop automatically using the configured end date), find the AutoIT icon in the task tray (to the right of the task bar at the bottom of the screen), right-click and select 'Stop script'.
+19. To stop the scanning procedure **before completion** (the script will stop automatically using the configured end date), find the AutoIT icon in the task tray (to the right of the task bar at the bottom of the screen), right-click and select 'Stop script'.
 
     ![](./images/exit_script.jpg)
 
@@ -177,8 +185,8 @@ END_DATE_TIME|When the scanning should stop. Format YYYY/mm/dd HH:mm:ss|
 LOG_FILE|Location to create the log file|"C:\Data\scanner_1_log.log"
 SCAN_MAX_TIME|Maximum scan time before a scan fail is triggered, in seconds| 1200
 OUTPUT_FOLDER|Where the scans should be saved - will be created if doesn't exist|
-MODE_TRANSMISSION|Description of transmission mode - should match the value in the Mode dropdown in VueScan|"Transparency"
-MODE_REFLECTIVE|Description of the reflective mode - should match the value in the Mode dropdown in VueScan|"Flatbed"
+MODE_TRANSMISSION|Description of transmission mode - should match the value in the Mode dropdown in VueScan. This option is rarely changed.|"Transparency"
+MODE_REFLECTIVE|Description of the reflective mode - should match the value in the Mode dropdown in VueScan. This option is rarely changed.|"Flatbed"
 
 MODE_TRANMISSION and MODE_REFLECTIVE are configurable because for some scanners the Transparency mode in VueScan is listed as "Transparency 8x8".
 
@@ -278,13 +286,13 @@ Instructions placed in the scanning procedure are run in sequence, line by line.
 
 3. If you haven't already then ppen VueScan and select 'Professional' in the Options dropdown in the Input tab. Select the relevant scanner in the Source dropdown. Select the relevant Mode in the Mode dropdown (Flatbed or Transparency)
 
-7. Click the Preview button to generate a preview.
+4. Click the Preview button to generate a preview.
 
-8. Open the Crop tab and select Manual in the Crop size dropdown. You should see the X size, Y size, X offset, and Y offset values.
+5. Open the Crop tab and select Manual in the Crop size dropdown. You should see the X size, Y size, X offset, and Y offset values.
 
     ![](./images/select_manual_cropsize.jpg) 
 
-9. On the preview area select the region to scan. 
+6. On the preview area select the region to scan. 
 
     The X size, Y size etc values should update. 
 
@@ -298,7 +306,7 @@ Instructions placed in the scanning procedure are run in sequence, line by line.
 
     It is important that the appropriate mode is set before copying these values. The X and Y offsets are different in the different modes...
 
-10. One at a time copy the crop values from the input boxes.
+7. One at a time copy the crop values from the input boxes.
 
     These can be typed in manually but the easiest and quickest way is to double-click the value to highlight then CTRL-C to copy...
     
@@ -319,7 +327,7 @@ Instructions placed in the scanning procedure are run in sequence, line by line.
     
     ```
 
-9. Replace the *resolution*, *image_type* and *file_type* placeholders with the appropriate values e.g.
+8. Replace the *resolution*, *image_type* and *file_type* placeholders with the appropriate values e.g.
 
     ```
     Func scanningProcedure()
@@ -333,7 +341,7 @@ Instructions placed in the scanning procedure are run in sequence, line by line.
     ![](./images/params_setup.jpg) 
 
 
-10. Done! Now repeat for any other regions of the image you want to scan.
+9. Done! Now repeat for any other regions of the image you want to scan.
 
     ```
     Func scanningProcedure()
@@ -348,7 +356,7 @@ Instructions placed in the scanning procedure are run in sequence, line by line.
     
     ```
 
-11. Add the setMode command. 
+10. Add the setMode command. 
 
     If all the regions are to be scanned in the same mode, e.g. transmission, then add the setMode($MODE_TRANSMISSION) command to the Pre-Scan section (if it isn't already there):
 

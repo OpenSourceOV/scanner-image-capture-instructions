@@ -5,7 +5,7 @@
 * Flatbed Scanner with an optical resolution of at least 2400 DPI and transmissive scanning ability - see [Transmissive Scanners](#transmissive-scanners) for more information. 
 * OpenSourceOV caviscan scripts - download the latest version from  [https://github.com/OpenSourceOV/caviscan/archive/master.zip](https://github.com/OpenSourceOV/caviscan/archive/master.zip)
 * AutoIT automation software (free) - download from [AutoIT](https://www.autoitscript.com/site/autoit-script-editor/downloads/)
-* VueScan scanner software (Professional Edition, $90 USD) - download and purchase from [Hamrick Software](https://www.hamrick.com/)
+* VueScan scanner software v9.5.81 or earlier (Professional Edition, $90 USD) - download and purchase from [Hamrick Software](https://www.hamrick.com/)
 * Windows-based computer. For running on mac see [Running on a mac](#running-on-a-mac).
 * Scholander pressure chamber (pressure bomb) to measure sample water potential over time. A psychrometer can be used as an alternative e.g. the [ICT Stem Psychrometer](http://www.ictinternational.com/products/psy1/psy1-stem-psychrometer/) is excellent.
 
